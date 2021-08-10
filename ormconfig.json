@@ -1,0 +1,11 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "Jejeje123",
+    "database": "challenge",
+    "entities": ["dist/entities/**/*.js"],
+    "schema": "rooftop-backend-challenge",
+    "synchronize": false
+ }

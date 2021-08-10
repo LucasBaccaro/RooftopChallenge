@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "a6576e57-edf6-4d64-ab5e-b6246f051b0d",
+		"name": "Coupon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/coupons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busqueda por email/code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/coupons/?code=1334&customer_email=1111@hotmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coupons",
+						""
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "1334"
+						},
+						{
+							"key": "customer_email",
+							"value": "1111@hotmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nuevo cupon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\" : \"A45FDGA\",\r\n    \"expires_at\":\"2022-06-08 02:16:15\",\r\n    \"assigned_at\":\"2021-10-08 10:46:15\",\r\n    \"customer_email\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/coupons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch email",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"expires_at\":\"2022-06-08 02:16:15\",\r\n    \"assigned_at\":\"2021-10-08 10:46:15\",\r\n    \"customer_email\":\"117@hotmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/coupons/117\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"coupons",
+						"117\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
